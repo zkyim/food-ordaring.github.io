@@ -1,0 +1,253 @@
+<!-- 
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== 20230502 محمد محمد زكي محمد جاد =======================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/ 
+-->
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="../images/favicon-1.png">
+
+        <link rel="stylesheet" href="../css/all.min.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/master.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+        
+        <title> Food Ordaring </title>
+    </head>
+    <body class="body-1">
+
+        <header class="header-1">
+            <div class="container-1">
+                <div class="logo-1">
+                <img src="../images/favicon-1.png" width="30" height="30" style="margin-right:5px;border-radius:50%;" alt="food">
+                    Food Ordaring
+                </div>
+                <div class="dots-1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="links-1">
+                    <ul>
+                        <li><a href="#video"> Video </a></li>
+                        <li><a href="#Order"> Order </a></li>
+                        <li><a href="About.html"> About </a></li>
+                        <li><a href="../index.html"> Log Out </a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-section-1">
+
+            <div class="theam-1">
+                <div>
+                  <h3> Colors Theam </h3>
+                  <div>
+                    <span class="color-1 active-1" style="background-color: #2196f3;" data-maincolor="#2196f3" data-maincoloralt="#4aafff"></span>
+                    <span class="color-1 " style="background-color: #22c55e;" data-maincolor="#22c55e" data-maincoloralt="#91ffba82"></span>
+                    <span class="color-1 " style="background-color: #f44336;" data-maincolor="#f44336" data-maincoloralt="#fb594d69"></span>
+                    <span class="color-1 " style="background-color: #f59e0b;" data-maincolor="#f59e0b" data-maincoloralt="#f5af355e"></span>
+                    <span class="color-1 " style="background-color: #f94180;" data-maincolor="#f94180" data-maincoloralt="#ff669aa3"></span>
+                  </div>
+                </div>
+            </div>
+
+            <div class="cont-map-img-1">
+                <h3>Map image</h3>
+                <p>click in the section <b> to move it </b> </p>
+                <div>
+                    <img src="../images/map page-1.png" usemap="#map-img-1" alt="">
+                    <map name="map-img-1">
+                        <area shape="rect" coords="69,51,195,100" href="#video">
+                        <area shape="rect" coords="229,50,359,101" href="#Order">
+                        <area shape="rect" coords="393,50,520,102" href="#table">
+                    </map>
+                </div>
+            </div>
+
+            <div id="video" class="videos-1">
+                <div class="container-1">
+                    <div class="holder-1">
+                        <div class="preview-1">
+                            <div class="info-1"> Burger </div>
+                            <div class="video-1">
+                                <video class="infovideo-1" controlslist="nodownload" controls preload="metadata">
+                                    <source src="../videos/Burger-1.mp4">
+                                </video>
+                                <iframe style="display: none; width: 100%; height: 100%;" src="" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="list-1">
+                            <div class="name-1"> List </div>
+                            <ul>
+                                <li class="active-1" data-src="../videos/Burger-1.mp4" data-type="url"> Burger </li>
+                                <li data-src="https://www.youtube.com/embed/qtlhdIfojmc?si=ln-b1DuVOeWB1CZ_" data-type="link"> Cack </li>
+                                <li data-src="../videos/Pizza-1.mp4" data-type="url"> Pizza </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Order">
+                <div class="cont-search">
+                    <input type="search" placeholder="Search In Name" name="search" class="" value="">
+                    <span onclick="searchItem()">Search</span>
+                </div>
+
+                <div class="taps-1">
+                    <ul> <li data-category="All" class="active-1">All</li> </ul>
+                </div>
+
+                <div class="display-1">
+    
+                </div>
+            </div>
+
+            <div style="display: flex;flex-wrap: wrap; align-items: center;justify-content: center; gap: 20px;">
+                <audio src="../audio/music-1.mp3" controls></audio> <span> music </span>
+            </div>
+
+            <div>
+                <h3>type food</h1>
+                <!-- reversed -->
+                <ol type="1" start="1">
+                    <li>Burger</li>
+                    <li>Pizza</li>
+                    <li>Juse</li>
+                </ol>
+            </div>
+            
+            <div id="table" class="responsive-table-1">
+                <h2>Names Of Chef</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#ID</th>
+                            <th>img</th>
+                            <th>Chef Name</th>
+                            <th>Address</th>
+                            <th>Raite</th>
+                            <th>status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><div><img src="../images/chef1-1.png" alt=""></div></td>
+                            <td>Ches</td>
+                            <td>Cairo</td>
+                            <td>4.5</td>
+                            <td><span class="status-1 active-1">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><div><img src="../images/chef2-1.png" alt=""></div></td>
+                            <td>Ilisa</td>
+                            <td>Cairo</td>
+                            <td>3.22</td>
+                            <td><span class="status-1 pending-1">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><div><img src="../images/chef3-1.jpg" alt=""></div></td>
+                            <td>Tom</td>
+                            <td>Cairo</td>
+                            <td>4.88</td>
+                            <td><span class="status-1 stop-1">Stop</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="cont-order-1 responsive-table-1">
+                <h2>Ordered Food</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Catigory</th>
+                            <th>Chef</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Total</td>
+                            <td class="number-total-1" colspan="5">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+
+        </div>
+
+
+        <span class="up-1"><i class="fas fa-angle-double-up"></i></span>
+        <footer class="footer-1">
+            <div class="container-1">
+                <div class="box-1">
+                    <h2> Contact Us </h2>
+                    <ul>
+                        <li><a href="tel:01030269257"><i class="fa-solid fa-phone"></i> Phone Number </a></li>
+                        <li><a href="mailto:zkym4564@gmail.com"><i class="fas fa-envelope"></i> Email </a></li>
+                    </ul>
+                </div>
+                <div class="box-1">
+                    <h2>Links</h2>
+                    <ul>
+                        <li><a href="About.html"><i class="fa-solid fa-address-card"></i> About Us </a></li>
+                        <li><a href="../index.html"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="link-1">
+                <a href="">
+                    <div class="facebook-1 li-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="twitter-1 li-1">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="instagram-1 li-1">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="snapchat-1 li-1">
+                        <i class="fab fa-snapchat-ghost"></i>
+                    </div>
+                </a>
+                <a href="tel:">
+                    <div class="whtsapp-1 li-1">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="copy-right-1"> Copy righit &copy; </div>
+        </footer>
+        <script>let NumberOfPage = 2;</script>
+        <script src="../js/master.js"></script>
+    </body>
+</html>
