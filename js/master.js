@@ -1,3 +1,8 @@
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== 20230502 محمد محمد زكي محمد جاد =======================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/
 if (NumberOfPage == 1) {
 
     let colorTheam = localStorage.getItem('main-color');
@@ -68,6 +73,9 @@ if (NumberOfPage == 1) {
         }
         if (mail.value.length > 30) {
             mailError.push(' you must fill 30 characters or small ');
+        }
+        if (mail.value.length < 30 && mail.value != '' && !mail.value.match(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/)) {
+            mailError.push(' invalid email must be like example@example.com');
         }
         mailError.forEach( error => {
             EmailError.innerHTML = error;
@@ -149,7 +157,6 @@ if (NumberOfPage == 1) {
         }
     });
 }
-
 
 if (NumberOfPage == 2) {
     // ==================================== Up button And List Header ================================
@@ -314,6 +321,7 @@ const foodItem = [
     }
 ];
 
+
 let categories = [];
 foodItem.forEach( item => {
     if (categories.indexOf(item.category) == -1) {
@@ -358,9 +366,9 @@ function card (index,img, instructor, title, description, price, user) {
     display.innerHTML += `
     <div class="container-card-1">
         <div class="card-1">
-            <img class="cover-1" src="images/${img}" alt="">
+            <img class="cover-1" src="../images/${img}" alt="">
             <i onclick="order(${index})" class="fa-solid fa-cart-shopping"></i>
-            <img class="instructor-1" src="images/${instructor}" alt="">
+            <img class="instructor-1" src="../images/${instructor}" alt="">
             <div class="cont-info-1">
                 <h4 class="title-1"> ${title} </h4>
                 <p class="description-1"> ${description} </p>
@@ -374,6 +382,19 @@ function card (index,img, instructor, title, description, price, user) {
     </div>
     `;
 }
+let searchInput = document.querySelector('.container-section-1 .cont-search input');
+function searchItem () {
+    display.innerHTML = '';
+    foodItem.forEach( (item, index) => {
+        if (item.title.indexOf(searchInput.value) > -1) {
+            card (index,item.img, item.instructor, item.title, item.description, item.price, item.user);
+        }
+    });
+}
+
+
+
+// ======================================================= Ordered Food ========================================
 
 let OrderedTable = document.querySelector('.cont-order-1 table tbody');
 let numberTotal = document.querySelector('.cont-order-1 table tfoot .number-total-1');
@@ -383,10 +404,10 @@ function order (index) {
     `
         <tr>
             <td>${foodItem[index].id}</td>
-            <td><img src="images/${foodItem[index].img}"/></td>
+            <td><img src="../images/${foodItem[index].img}"/></td>
             <td>${foodItem[index].title}</td>
             <td>${foodItem[index].category}</td>
-            <td><img src="images/${foodItem[index].instructor}"/></td>
+            <td><img src="../images/${foodItem[index].instructor}"/></td>
             <td>${foodItem[index].rating}</td>
             <td>${foodItem[index].price}$</td>
             <td><button onclick="deleteItem(this,${index})" class="status-1 delete-1"> Delete </button></td>
@@ -400,7 +421,7 @@ function deleteItem (ele, index) {
     numberTotal.innerHTML = Number(numberTotal.innerText) - foodItem[index].price;
 }
 
-// ========================================================== Video ====================================================
+// ==================================================== Video ====================================================
 
 let chiledUlList = document.querySelectorAll(".list-1 ul li");
 
@@ -427,4 +448,174 @@ chiledUlList.forEach( (ele) => {
 });
 
 
+}
+
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== محمد أحمد سمير أحمد 20230446   ==========================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/
+
+if (NumberOfPage == 5) {
+    var p = document.getElementById('JS2');
+    var display = 0;
+
+    function Function2(){
+        if(display == 1){
+            p.style.display = 'block';
+            display = 0;
+        }
+        else{
+            p.style.display = 'none';
+            display = 1;
+        }
+    }
+}
+
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== لؤي إيهاب فتحي السيد 20230430 ==========================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/
+if (NumberOfPage == 6) {
+    function validateform() {
+        let x = document.forms["myform"]['fname'].value;
+        let y = document.forms["myform"]["cform"].value;
+        if (x == "") {
+            alert("Name must be filled out");
+            return false;
+            
+        }
+        else {
+            if (y == "") {
+                alert("Comment cannot be empty ");
+                return false;
+    
+            }
+        }
+    }
+    function saveContent() {
+        document.addEventListener("DOMContentLoaded", function () {
+          const textArea = document.querySelector("textarea");
+          const storageKey = "text";
+    
+          const init = () => {
+            textArea.value = localStorage.getItem(storageKey);
+    
+            textArea.addEventListener("input", () => {
+              localStorage.setItem(storageKey, textArea.value);
+            });
+          };
+    
+          init();
+        });
+        
+        
+    }
+    // Function to save search content to local storage
+    function saveContent1() {
+        const searchInput = document.getElementById('searchInput').value.trim(); // Assuming there's an input field with the id 'searchInput'
+        if (searchInput) {
+            let searches = JSON.parse(localStorage.getItem('searches')) || [];
+            searches.unshift(searchInput);
+            localStorage.setItem('searches', JSON.stringify(searches));
+            displaySearchHistory();
+        }
+    }
+    
+    // Function to display search history
+    function displaySearchHistory() {
+        const searchHistory = document.getElementById('searchHistory');
+        searchHistory.innerHTML = '';
+        const searches = JSON.parse(localStorage.getItem('searches')) || [];
+        searches.forEach(search => {
+            const li = document.createElement('li');
+            li.textContent = search;
+            searchHistory.appendChild(li);
+        });
+    }
+    
+    // Call displaySearchHistory function when the page loads
+}
+
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== 20230459 محمد ثابت حسني حسين  =========================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/
+
+if (NumberOfPage == 3) {
+    let currentItem = null;
+
+    let previousItem = null;
+
+
+    document.querySelectorAll('.item-3').forEach(item => {
+        const itemName = item.querySelector('.name');
+        item.addEventListener('mouseover', () => {
+            currentItem = item;
+        
+            itemName.style.opacity = '1';
+        
+            if (previousItem && previousItem !== currentItem) {
+                previousItem.querySelector('.name').style.opacity = '0';
+            }
+        
+            previousItem = currentItem;
+        });
+        item.addEventListener('mouseleave', () => {
+            
+            itemName.style.opacity = '0';
+        });
+    });
+}
+
+/*====================================================================================================================*/
+/*####################################################################################################################*/
+/*========================================== 20230448 محمد أحمد محمد بكر  ==========================================*/
+/*####################################################################################################################*/
+/*====================================================================================================================*/
+
+if (NumberOfPage == 4) {
+    var count=2;
+    function validated (){
+        var email = document.getElementById('email9');
+    var password = document.getElementById('pw9');
+    var valid=false;
+    var emailArray =["test@email.com"];
+    var pwArray =["password123"];
+    for (let i = 0 ; i < emailArray,length; i++) {
+        if ((email==emailArray[i]) && (password==pwArray[i]))  {
+            valid=true;
+            break;
+            
+        }
+    }
+    if(valid){
+    alert("login was succesful");
+    window.location="Desserts.html";
+    return false;
+    }
+    var t ="try";
+    if(count==1){t='try'}
+    if(count>=1){
+
+        alert("invalid email or password"+"you have"+count+t+"left");
+            document.loginform9.email.value = "";
+            document.loginform9.password.value = "";
+            setTimeout("document.myform.loginform9.email.focus()", 25);
+            setTimeout("document.loginform9.email.select()", 25);
+            count --;
+        }
+
+        else {
+            alert ("Still incorrect! You have no more tries left!");
+            document.loginform9.email.value = "No more tries allowed!";
+            document.loginform9.password.value = "";
+            document.loginform9.email.disabled = true;
+            document.loginform9.password.disabled = true;
+            
+            return false;
+        }
+    }
 }
