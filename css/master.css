@@ -930,16 +930,245 @@ p {
     }
       /* End Table */
 
-      /*==============================================================================================================*/
+/*==============================================================================================================*/
 /*####################################################################################################################*/
 /*========================================== 20230511 محمد هشام أنور   ==============================================*/
 /*####################################################################################################################*/
 /*====================================================================================================================*/
+.body-10 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../images/vegan\ meal-9.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.body-10 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.body-10#body92{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/OIP-9.jpeg) ;
+    background-size: cover;
+    background-position: center;
+}
+
+.body-10 #vag{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.body-10 #loge{
+    font-size: large;
+    color:black;
+    user-select: none;
+
+
+}
+.body-10 .navi a{
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+
+}
+.body-10 .navi  a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.body-10 .navi a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.body-10 .btn-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.body-10 .btn-popup:hover{
+    background: black;
+    color:white;
+}
+.body-10 .inputs {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    min-height: 430px;
+    border-radius: 100px;
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+}
+.body-10 .img1 {
+    /* width: 302px;
+    height: 322px;
+    margin-left: 38px;
+    margin-top: 18px;
+    border-radius: 30px; */
+    width: 337px;
+    height: 387px;
+    margin-left: 38px;
+    margin-top: 18px;
+    border-radius: 30px 
+}
+.body-10 .recipe-text {
+    /* width: 56%;
+    margin-top: 343px;
+    margin-left: -285px;
+    size: 21px;
+    font-size: 18px;
+    font-family: fantasy; */
+    width: 56%;
+    /* margin-top: 343px;
+    margin-left: -257px; */
+    /* font-size: 15px;
+    font-family: fantasy;
+    margin-top: 405px;
+    margin-left: -276px; */
+    width: 56%;
+    font-size: 15px;
+    font-family: fantasy;
+    margin-top: 415px;
+    margin-left: -285px;
+}
+.body-10 .step{
+    margin-left: -770px;
+    margin-top: 50px;
+    font-family: cursive;
+    font-size: large;
+}
+.body-10 .igredients{
+    font-size: 25px;
+    font-style: unset;
+}
+.body-10 .stap{
+    margin-left: 622px;
+    /* margin-right: 30px; */
+    margin-top: -138px;
+    font-family: cursive;
+    font-size: large;
+}
+.body-10 .control {
+    max-width: 800px;
+
+    /* size: 24px; */
+    width: 544px;
+    margin-top: 17px;
+    margin-left: 690px;
+    border-radius: 10px;
+}
+.body-10 .stnp{
+    margin-left: -770px;
+    margin-top: 66px;
+    font-family: cursive;
+    font-size: large;
+    margin-right: -166px;
+}
+.body-10 .stop{
+  margin-left: -770px;
+    margin-top: 50px;
+    font-family: cursive;
+    font-size: large;
+    margin-right: -166px;
+}
+.body-10 .stip{
+   
+    margin-left: 638px;
+    margin-top: -237px;
+    font-family: cursive;
+    font-size: large;
+    margin-right: -166px;
+}
+.body-10 .stp{
+    
+    margin-left: 622px;
+    /* margin-right: 30px; */
+    margin-top: -261px;
+    font-family: cursive;
+    font-size: large;
+
+}
+.body-10 .social-icon {
+    width: 53px;
+    height: 50px;
+    margin: 13px;
+    display: inline-block;
+    margin-bottom: -65px;
+}
+  
+.body-10 .facebook-icon {
+    background: url('../images/icons8-facebook-50-9.png');
+    background-size: cover;
+}
+  
+.body-10 .instagram-icon {
+    background: url('../images/icons8-instagram-50-9.png');
+    background-size: cover; 
+}
+.body-10 .twitter-icon {
+    background: url('../images/icons8-twitter-50-9.png');
+    background-size: cover; 
+}
+  
+.body-10 .linkedin-icon {
+    background: url('../images/icons8-linked-in-50-9.png');
+    background-size: cover;
+}
+.body-10 .tram{
+    margin-left: 796px;
+}
+
+
+
+
+
+
+
+
 
 .body-9 {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url(../images/vegan\ meal-9.jpeg);
+    background-image: url(../images/nnn-9.jpeg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -949,7 +1178,7 @@ p {
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
-#body92{
+.body-9#body92{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -959,7 +1188,7 @@ p {
     background-position: center;
 }
 
-.body-9 #vag{
+.body-9 #veg{
     position: fixed;
     top: 0;
     left: 0;
@@ -974,9 +1203,6 @@ p {
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-.body-veg {
-	background-image: url(../images/nnn-9.jpeg);
 }
 .body-9 #loge{
     font-size: large;
@@ -1025,7 +1251,10 @@ p {
     background: black;
     color:white;
 }
+
 .body-9 .inputs {
+    /* background-color: #2ca15a;
+    backdrop-filter: blur(10px); Apply blur effect */
     background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1040,6 +1269,11 @@ p {
     margin-top: 100px;
 }
 .body-9 .img1 {
+    /* width: 302px;
+    height: 322px;
+    margin-left: 38px;
+    margin-top: 18px;
+    border-radius: 30px; */
     width: 337px;
     height: 387px;
     margin-left: 38px;
@@ -1047,18 +1281,26 @@ p {
     border-radius: 30px 
 }
 .body-9 .recipe-text {
+    /* width: 56%;
+    margin-top: 343px;
+    margin-left: -285px;
+    size: 21px;
+    font-size: 18px;
+    font-family: fantasy; */
     width: 56%;
-    width: 56%;
+    /* margin-top: 343px;
+    margin-left: -257px; */
     font-size: 15px;
     font-family: fantasy;
-    margin-top: 415px;
-    margin-left: -285px;
+    margin-top: 412px;
+    margin-left: -286px;
 }
 .body-9 .step{
     margin-left: -770px;
     margin-top: 50px;
     font-family: cursive;
     font-size: large;
+    margin-right: -166px;
 }
 .body-9 .igredients{
     font-size: 25px;
@@ -1066,12 +1308,15 @@ p {
 }
 .body-9 .stap{
     margin-left: 622px;
-    margin-top: -138px;
+    /* margin-right: 30px; */
+    margin-top: -260px;
     font-family: cursive;
     font-size: large;
 }
 .body-9 .control {
     max-width: 800px;
+
+    /* size: 24px; */
     width: 544px;
     margin-top: 17px;
     margin-left: 690px;
@@ -1079,22 +1324,31 @@ p {
 }
 .body-9 .stnp{
     margin-left: -770px;
-    margin-top: 66px;
+    margin-top: 50px;
     font-family: cursive;
     font-size: large;
     margin-right: -166px;
 }
-.body-9 .stip{  
-    margin-left: 638px;
-    margin-top: -237px;
+.body-9 .stop{
+  margin-left: -770px;
+    margin-top: 50px;
     font-family: cursive;
     font-size: large;
     margin-right: -166px;
 }
-.body-9 .stp{
+.body-9 .stip{
+   
     margin-left: 622px;
     /* margin-right: 30px; */
-    margin-top: -261px;
+    margin-top: -323px;
+    font-family: cursive;
+    font-size: large;
+}
+.body-9 .stp{
+    
+    margin-left: 622px;
+    /* margin-right: 30px; */
+    margin-top: -345px;
     font-family: cursive;
     font-size: large;
 }
@@ -1106,11 +1360,12 @@ p {
     margin-bottom: -65px;
 }
   
+      
 .body-9 .facebook-icon {
     background: url('../images/icons8-facebook-50-9.png');
     background-size: cover;
 }
-  
+      
 .body-9 .instagram-icon {
     background: url('../images/icons8-instagram-50-9.png');
     background-size: cover; 
@@ -1119,7 +1374,7 @@ p {
     background: url('../images/icons8-twitter-50-9.png');
     background-size: cover; 
 }
-  
+      
 .body-9 .linkedin-icon {
     background: url('../images/icons8-linked-in-50-9.png');
     background-size: cover;
@@ -1127,6 +1382,7 @@ p {
 .body-9 .tram{
     margin-left: 796px;
 }
+
 
 /*====================================================================================================================*/
 /*####################################################################################################################*/
